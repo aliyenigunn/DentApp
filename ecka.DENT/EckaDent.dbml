@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ECKADENT" Class="EckaDentDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UN3D8DT\SQLEXPRESS;Initial Catalog=ECKADENT;Integrated Security=True" SettingsObjectName="ecka.DENT.Properties.Settings" SettingsPropertyName="ECKADENTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OPROCESS" Member="OPROCESSes">
+    <Type Name="OPROCESS">
+      <Column Name="processID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stockID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Oquantity" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Odate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="usageArea" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STOCK" Member="STOCKs">
+    <Type Name="STOCK">
+      <Column Name="stockID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stockGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="stockName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="stockCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="barcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="optimumQuantity" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="isActive" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="warehouse" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USERS" Member="USERs">
+    <Type Name="USER">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="authority" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="isActive" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastLogin" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CIKISBILGI" Member="CIKISBILGIs">
+    <Type Name="CIKISBILGI">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STOKADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CIKISMIKTARI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TARIH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KULLANIMALANI" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="KULLANICI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
